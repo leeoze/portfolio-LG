@@ -1,0 +1,91 @@
+/* About.module.css */
+
+.about {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: var(--navbar-height);
+  background: var(--bg-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decoração sutil de fundo */
+.about::before {
+  content: '';
+  position: absolute;
+  top: -160px;
+  right: -160px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, var(--accent-bg) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+/* ===== HERO — conteúdo centralizado à esquerda ===== */
+.hero {
+  max-width: 720px;
+  animation: fadeInUp 0.7s ease both;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 800;
+  line-height: 1.0;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+}
+
+.name span {
+  color: var(--accent);
+}
+
+.role {
+  font-family: var(--font-display);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 1.75rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.roleDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: inline-block;
+  flex-shrink: 0;
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+.bio {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  max-width: 580px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .actions {
+    flex-direction: column;
+  }
+
+  .actions .btn {
+    justify-content: center;
+    text-align: center;
+  }
+}
+

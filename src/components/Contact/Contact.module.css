@@ -1,0 +1,97 @@
+.contact {
+  background: var(--bg-secondary);
+}
+
+/* ===== CABEÇALHO ===== */
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* 👇 ESTA É A CLASSE CORRETA AGORA */
+.sectionSubtitle {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.6;
+
+  display: block;
+}
+
+/* ===== BOTÕES ===== */
+.linksList {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.contactBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 28px;
+  border-radius: var(--radius);
+  border: 1.5px solid var(--border-strong);
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+
+.contactBtnPrimary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.contactBtnPrimary:hover {
+  background: var(--accent-light);
+  border-color: var(--accent-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.contactBtnOutline {
+  background: var(--bg-card);
+  color: var(--text-primary);
+}
+
+.contactBtnOutline:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.contactBtnIcon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+.contactBtnPrimary .contactBtnIcon {
+  opacity: 1;
+}
+
+.contactBtnLabel {
+  letter-spacing: 0.01em;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 480px) {
+  .linksList {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .contactBtn {
+    justify-content: center;
+  }
+}
