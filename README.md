@@ -2,6 +2,10 @@
 
 Portfólio pessoal desenvolvido com React + Vite. Responsivo, com suporte a tema claro/escuro.
 
+- [Acesse o portfólio online aqui](https://portfolio-lg-one.vercel.app/)
+
+
+
 ## Como rodar localmente
 
 **Pré-requisito:** Node.js 18+
