@@ -7,7 +7,7 @@ Portfólio pessoal desenvolvido com React + Vite. Responsivo, com suporte a tema
 **Pré-requisito:** Node.js 18+
 
 ```bash
-git clone https://github.com/leeoze/portfolioLG.git
+git clone https://github.com/leeoze/portfolio-LG.git
 cd portfolio-LG
 npm install
 npm run dev
