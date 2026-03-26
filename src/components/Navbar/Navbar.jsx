@@ -55,7 +55,10 @@ export default function Navbar() {
     setMenuOpen(false);
     const target = document.querySelector(href);
     if (target) {
-      const offset = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--navbar-height')) || 72;
+      const offset =
+        parseInt(
+          getComputedStyle(document.documentElement).getPropertyValue('--navbar-height')
+        ) || 72;
       const top = target.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({ top, behavior: 'smooth' });
     }
@@ -69,7 +72,12 @@ export default function Navbar() {
       <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
         <div className={`container ${styles.inner}`}>
           {/* Logo com iniciais */}
-          <a href="#sobre" className={styles.logo} onClick={e => handleNavClick(e, '#sobre')} aria-label="Leonardo Gomes — início">
+          <a
+            href="#sobre"
+            className={styles.logo}
+            onClick={e => handleNavClick(e, '#sobre')}
+            aria-label="Leonardo Gomes — início"
+          >
             <span className={styles.logoMark}>LG</span>
             <span className={styles.logoName}>Leonardo Gomes</span>
           </a>
@@ -102,10 +110,11 @@ export default function Navbar() {
             </button>
 
             {/* Hambúrguer */}
+            {/* FIX: aria-label agora é dinâmico — reflete o estado real do menu */}
             <button
               className={`${styles.hamburger} ${menuOpen ? styles.open : ''}`}
               onClick={() => setMenuOpen(prev => !prev)}
-              aria-label="Abrir menu"
+              aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'}
               aria-expanded={menuOpen}
             >
               <span />
@@ -117,7 +126,12 @@ export default function Navbar() {
       </nav>
 
       {/* Menu mobile */}
-      <div className={`${styles.mobileMenu} ${menuOpen ? styles.open : ''}`} role="dialog" aria-label="Menu de navegação">
+      <div
+        className={`${styles.mobileMenu} ${menuOpen ? styles.open : ''}`}
+        role="dialog"
+        aria-label="Menu de navegação"
+        aria-hidden={!menuOpen}
+      >
         <div className="container">
           <ul>
             {NAV_LINKS.map(({ href, label }) => (
@@ -126,6 +140,7 @@ export default function Navbar() {
                   href={href}
                   className={activeSection === href.slice(1) ? styles.active : ''}
                   onClick={e => handleNavClick(e, href)}
+                  tabIndex={menuOpen ? 0 : -1}
                 >
                   {label}
                 </a>

@@ -6,7 +6,7 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  height: var(--navbar-height);
+  height: var(--navbar-height, 72px);
   background: var(--bg-navbar);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -123,8 +123,9 @@
 }
 
 /* ===== HAMBURGER ===== */
+
 .hamburger {
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 5px;
@@ -136,6 +137,12 @@
   background: transparent;
   cursor: pointer;
   transition: all var(--transition);
+}
+
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
 }
 
 .hamburger:hover {
@@ -165,11 +172,13 @@
 }
 
 /* ===== MOBILE MENU ===== */
+
 .mobileMenu {
   position: fixed;
-  top: var(--navbar-height);
+  top: var(--navbar-height, 72px);
   left: 0;
   right: 0;
+  z-index: 999;
   background: var(--bg-navbar);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -216,9 +225,5 @@
 @media (max-width: 768px) {
   .navLinks {
     display: none;
-  }
-
-  .hamburger {
-    display: flex;
   }
 }
