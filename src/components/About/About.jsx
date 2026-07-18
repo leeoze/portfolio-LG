@@ -21,7 +21,7 @@ export default function About() {
 
           <p className={styles.role}>
             <span className={styles.roleDot} aria-hidden="true" />
-            Desenvolvedor Front-End
+            Desenvolvedor Full Stack
           </p>
 
           <p className={styles.bio}>
