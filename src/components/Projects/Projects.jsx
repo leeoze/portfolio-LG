@@ -43,6 +43,18 @@ const PROJECTS = [
     tags: ['Next.js 15', 'TypeScript', 'Jest', 'CI/CD', 'React'],
     repoUrl: 'https://github.com/leeoze/task-app.git',
   },
+  {
+    id: 4,
+    emoji: '🐉',
+    bgColor: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
+    bgColorDark: 'linear-gradient(135deg, #002820 0%, #003830 100%)',
+    title: 'PokéAPI',
+    status: 'done',
+    description:
+      'API de gerenciamento desenvolvida com FastAPI, PostgreSQL e SQLAlchemy async, com cache Redis, filas de background com Celery e Kafka, monitoramento via ELK Stack, containerização Docker, orquestração Kubernetes e pipeline CI/CD com GitHub Actions e Deploy via Render.com',
+    tags: ['FastAPI', 'PostgreSQL', 'SQLAlchemy', 'Redis', 'Celery', 'Kafka', 'ELK Stack', 'Docker', 'Kubernetes', 'GitHub Actions', 'Render.com'],
+    repoUrl: 'https://github.com/leeoze/poke-api.git',
+  },
 ];
 
 // Sub-componente: Card de Projeto
